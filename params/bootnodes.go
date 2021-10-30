@@ -21,8 +21,6 @@ import "github.com/citrino-network/citrino-cli/common"
 // MainnetBootnodes are the enode URLs of the P2P bootstrap nodes running on
 // the main Ethereum network.
 var MainnetBootnodes = []string{
-	// Ethereum Foundation Go Bootnodes
-	"enode://2982aab7f7c305624e06dd09913076c68b7c7c1375cea0ea57ec8fb1106fdd1b4f19ed8348a3065061ac28889489edef7194a6f0a1bb7b06997833a1a490fe16@181.129.103.142:30303",
 }
 
 // RopstenBootnodes are the enode URLs of the P2P bootstrap nodes running on the
@@ -41,7 +39,6 @@ var GoerliBootnodes = []string{
 }
 
 var V5Bootnodes = []string{
-	"enr:-KO4QBXntOdrkjpyFskeduQpnYJ1ncRvUAS2I2vldZc2lqsyPEKMGM-5XUMbp0S7QhHDXSrV_2V4mZ3wMqmVe_ML-PaGAXzSftDng2V0aMfGhHFBNt6AgmlkgnY0gmlwhLWBZ46Jc2VjcDI1NmsxoQIpgqq398MFYk4G3QmRMHbGi3x8E3XOoOpX7I-xEG_dG4RzbmFwwIN0Y3CCdl-DdWRwgnZf",
 }
 
 const dnsPrefix = ""
