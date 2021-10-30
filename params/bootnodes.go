@@ -21,6 +21,7 @@ import "github.com/citrino-network/citrino-cli/common"
 // MainnetBootnodes are the enode URLs of the P2P bootstrap nodes running on
 // the main Ethereum network.
 var MainnetBootnodes = []string{
+	"enode://e700ba1de15a6af3c38f45f60324018b7abd99117ce141a48793e2e479707a0ffa70a63a615bf0c5754760fb7cd2470d2059ac3b2e77cfcd61b8cf275372b35b@181.129.103.142:30303",
 }
 
 // RopstenBootnodes are the enode URLs of the P2P bootstrap nodes running on the
@@ -39,9 +40,10 @@ var GoerliBootnodes = []string{
 }
 
 var V5Bootnodes = []string{
+	"enr:-KO4QHDYX79GOtbwGRZHP92bNKftJ9bpRrw-f7Fa67xrROrMDJJvGjP5vXL29ZJIZD_oWI2a0-SUbr7SAyzr5bZUTTWGAXzSL6lDg2V0aMfGhAL0oZ6AgmlkgnY0gmlwhLWBZ46Jc2VjcDI1NmsxoQPnALod4Vpq88OPRfYDJAGLer2ZEXzhQaSHk-LkeXB6D4RzbmFwwIN0Y3CCdl-DdWRwgnZf",
 }
 
-const dnsPrefix = ""
+const dnsPrefix = "Nil@"
 
 // KnownDNSNetwork returns the address of a public DNS-based node list for the given
 // genesis hash and protocol. See https://github.com/ethereum/discv4-dns-lists for more
@@ -50,7 +52,7 @@ func KnownDNSNetwork(genesis common.Hash, protocol string) string {
 	var net string
 	switch genesis {
 	case MainnetGenesisHash:
-		net = "mainnet"
+		net = "mainnet" //
 	case RopstenGenesisHash:
 		net = "ropsten"
 	case RinkebyGenesisHash:
