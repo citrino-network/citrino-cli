@@ -27,10 +27,10 @@ import (
 
 // Genesis hashes to enforce below configs on.
 var (
-	MainnetGenesisHash = common.HexToHash("0xb6a83f9337f0d75ab25d3e79e2af3d4d8fddc60cf3f78fabff08ae2410e97e75")
-	RopstenGenesisHash = common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d")
-	RinkebyGenesisHash = common.HexToHash("0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177")
-	GoerliGenesisHash  = common.HexToHash("0xbf7e331f7f7c1dd2e05159666b3bf8bc7a8a3a9eb1d518969eab529dd9b88c1a")
+	MainnetGenesisHash = common.HexToHash("0x0862ca1c9038fe77b55d2474bb93ae089c3bb14e9798c7188c1a88521c709e69")
+	RopstenGenesisHash = common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
+	RinkebyGenesisHash = common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
+	GoerliGenesisHash  = common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
 )
 
 // TrustedCheckpoints associates each known checkpoint with the genesis hash of
@@ -54,7 +54,7 @@ var CheckpointOracles = map[common.Hash]*CheckpointOracleConfig{
 var (
 	// MainnetChainConfig is the chain parameters to run a node on the main network.
 	MainnetChainConfig = &ChainConfig{
-		ChainID:             big.NewInt(57001),
+		ChainID:             big.NewInt(57),
 		HomesteadBlock:      big.NewInt(0),
 		DAOForkBlock:        nil,
 		DAOForkSupport:      false,
@@ -69,14 +69,14 @@ var (
 		MuirGlacierBlock:    big.NewInt(0),
 		BerlinBlock:         big.NewInt(0),
 		LondonBlock:         big.NewInt(0),
-		ArrowGlacierBlock:   big.NewInt(0),
+		ArrowGlacierBlock:   nil,
 		Ethash:              new(EthashConfig),
 	}
 
 	// MainnetTrustedCheckpoint contains the light client trusted checkpoint for the main network.
 	MainnetTrustedCheckpoint = &TrustedCheckpoint{
 		SectionIndex: 395,
-		SectionHead:  common.HexToHash("0xb6a83f9337f0d75ab25d3e79e2af3d4d8fddc60cf3f78fabff08ae2410e97e75"),
+		SectionHead:  common.HexToHash("0x0862ca1c9038fe77b55d2474bb93ae089c3bb14e9798c7188c1a88521c709e69"),
 		CHTRoot:      common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
 		BloomRoot:    common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
 	}
@@ -92,12 +92,12 @@ var (
 
 	// RopstenChainConfig contains the chain parameters to run a node on the Ropsten test network.
 	RopstenChainConfig = &ChainConfig{
-		ChainID:             big.NewInt(3),
+		ChainID:             big.NewInt(573),
 		HomesteadBlock:      big.NewInt(0),
 		DAOForkBlock:        nil,
 		DAOForkSupport:      true,
 		EIP150Block:         big.NewInt(0),
-		EIP150Hash:          common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d"),
+		EIP150Hash:          common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
 		EIP155Block:         big.NewInt(10),
 		EIP158Block:         big.NewInt(10),
 		ByzantiumBlock:      big.NewInt(1_700_000),
