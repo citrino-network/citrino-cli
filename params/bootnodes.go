@@ -22,7 +22,7 @@ import "github.com/citrino-network/citrino-cli/common"
 // the main Ethereum network.
 var MainnetBootnodes = []string{
 	// Ethereum Foundation Go Bootnodes
-	"enode://2a70a7fac47741484ddb351a1ab933b3ec7f309b44c536059a8409eef31b30e5741188de5a98b91e84182d9c85f9db99c44589f5aa93dd627b13a751a401f325@181.129.103.142:30303",
+	"enode://2982aab7f7c305624e06dd09913076c68b7c7c1375cea0ea57ec8fb1106fdd1b4f19ed8348a3065061ac28889489edef7194a6f0a1bb7b06997833a1a490fe16@181.129.103.142:30303",
 }
 
 // RopstenBootnodes are the enode URLs of the P2P bootstrap nodes running on the
@@ -41,10 +41,10 @@ var GoerliBootnodes = []string{
 }
 
 var V5Bootnodes = []string{
-	"enr:-KO4QGL8w0VTEn4oDDDVlLdQ7lOYp4rzHGZZ7xnrZpqiAcPZTtKKXWzeKkRhuKBdJ8N05_2JBHoUPMzfBDLhQroSnGOGAXzSWsCWg2V0aMfGhHFBNt6AgmlkgnY0gmlwhH8AAAGJc2VjcDI1NmsxoQMqcKf6xHdBSE3bNRoauTOz7H8wm0TFNgWahAnu8xsw5YRzbmFwwIN0Y3CCdl-DdWRwgnZf",
+	"enr:-KO4QBXntOdrkjpyFskeduQpnYJ1ncRvUAS2I2vldZc2lqsyPEKMGM-5XUMbp0S7QhHDXSrV_2V4mZ3wMqmVe_ML-PaGAXzSftDng2V0aMfGhHFBNt6AgmlkgnY0gmlwhLWBZ46Jc2VjcDI1NmsxoQIpgqq398MFYk4G3QmRMHbGi3x8E3XOoOpX7I-xEG_dG4RzbmFwwIN0Y3CCdl-DdWRwgnZf",
 }
 
-const dnsPrefix = "enrtree://AKA3AM6LPBYEUDMVNU3BSVQJ5AD45Y7YPOHJLEF6W26QOE4VTUDPE@"
+const dnsPrefix = ""
 
 // KnownDNSNetwork returns the address of a public DNS-based node list for the given
 // genesis hash and protocol. See https://github.com/ethereum/discv4-dns-lists for more
