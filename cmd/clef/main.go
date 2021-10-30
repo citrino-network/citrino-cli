@@ -100,12 +100,12 @@ var (
 	chainIdFlag = cli.Int64Flag{
 		Name:  "chainid",
 		Value: params.MainnetChainConfig.ChainID.Int64(),
-		Usage: "Chain id to use for signing (57=mainnet, 3=Ropsten)",
+		Usage: "Chain id to use for signing (1=mainnet, 3=Ropsten, 4=Rinkeby, 5=Goerli)",
 	}
 	rpcPortFlag = cli.IntFlag{
 		Name:  "http.port",
 		Usage: "HTTP-RPC server listening port",
-		Value: node.DefaultHTTPPort + 57,
+		Value: node.DefaultHTTPPort + 5,
 	}
 	signerSecretFlag = cli.StringFlag{
 		Name:  "signersecret",

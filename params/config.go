@@ -27,10 +27,10 @@ import (
 
 // Genesis hashes to enforce below configs on.
 var (
-	MainnetGenesisHash = common.HexToHash("0xdfa2cde97ab2d67bc828e91065f21b0579e186c43718e325c5c3c7e5d1405437")
-	RopstenGenesisHash = common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
-	RinkebyGenesisHash = common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
-	GoerliGenesisHash  = common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000")
+	MainnetGenesisHash = common.HexToHash("0x544b8f6756e8390fcd6e788dcbdfce84b98c875b3ab77242497b2016e0d19008")
+	RopstenGenesisHash = common.HexToHash("0x69e1672803da193db8f31dfdd5ce168f39997c0f29c2ce00150cfe0c07e14abb")
+	RinkebyGenesisHash = common.HexToHash("0x69e1672803da193db8f31dfdd5ce168f39997c0f29c2ce00150cfe0c07e14abb")
+	GoerliGenesisHash  = common.HexToHash("0x69e1672803da193db8f31dfdd5ce168f39997c0f29c2ce00150cfe0c07e14abb")
 )
 
 // TrustedCheckpoints associates each known checkpoint with the genesis hash of
@@ -56,48 +56,52 @@ var (
 	MainnetChainConfig = &ChainConfig{
 		ChainID:             big.NewInt(57),
 		HomesteadBlock:      big.NewInt(0),
-		DAOForkBlock:        nil,
-		DAOForkSupport:      false,
+		// DAOForkBlock:        nil,
+		// DAOForkSupport:      false,
 		EIP150Block:         big.NewInt(0),
-		EIP150Hash:          common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
-		EIP155Block:         big.NewInt(0),
-		EIP158Block:         big.NewInt(0),
-		ByzantiumBlock:      big.NewInt(0),
-		ConstantinopleBlock: big.NewInt(0),
-		PetersburgBlock:     big.NewInt(0),
-		IstanbulBlock:       big.NewInt(0),
-		MuirGlacierBlock:    big.NewInt(0),
-		BerlinBlock:         big.NewInt(0),
-		LondonBlock:         big.NewInt(0),
-		ArrowGlacierBlock:   nil,
+		EIP150Hash:          common.Hash{},
+		EIP155Block:         big.NewInt(0), 
+		EIP158Block:         big.NewInt(0), 
+		ByzantiumBlock:      big.NewInt(0), 
+		ConstantinopleBlock: big.NewInt(0), 
+		PetersburgBlock:     big.NewInt(0), 
+		// IstanbulBlock:       big.NewInt(0), 
+		// MuirGlacierBlock:    big.NewInt(0), 
+		// BerlinBlock:         big.NewInt(0), 
+		// LondonBlock:         big.NewInt(0), 
+		// ArrowGlacierBlock:   big.NewInt(0), 
 		Ethash:              new(EthashConfig),
 	}
 
 	// MainnetTrustedCheckpoint contains the light client trusted checkpoint for the main network.
 	MainnetTrustedCheckpoint = &TrustedCheckpoint{
 		SectionIndex: 395,
-		SectionHead:  common.HexToHash("0xdfa2cde97ab2d67bc828e91065f21b0579e186c43718e325c5c3c7e5d1405437"),
-		CHTRoot:      common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
-		BloomRoot:    common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
+		SectionHead:  common.HexToHash("0x544b8f6756e8390fcd6e788dcbdfce84b98c875b3ab77242497b2016e0d19008"),
+		CHTRoot:      common.HexToHash("0x2ccf3dbb58eb6375e037fdd981ca5778359e4b8fa0270c2878b14361e64161e7"),
+		BloomRoot:    common.HexToHash("0x2d46ec65a6941a2dc1e682f8f81f3d24192021f492fdf6ef0fdd51acb0f4ba0f"),
 	}
 
 	// MainnetCheckpointOracle contains a set of configs for the main network oracle.
 	MainnetCheckpointOracle = &CheckpointOracleConfig{
-		Address: common.HexToAddress("0x0000000000000000000000000000000000000000"),
+		Address: common.HexToAddress("0x9a9070028361F7AAbeB3f2F2Dc07F82C4a98A02a"),
 		Signers: []common.Address{
-			common.HexToAddress("0x0000000000000000000000000000000000000000"), // Peter
+			common.HexToAddress("0x1b2C260efc720BE89101890E4Db589b44E950527"), // Peter
+			common.HexToAddress("0x78d1aD571A1A09D60D9BBf25894b44e4C8859595"), // Martin
+			common.HexToAddress("0x286834935f4A8Cfb4FF4C77D5770C2775aE2b0E7"), // Zsolt
+			common.HexToAddress("0xb86e2B0Ab5A4B1373e40c51A7C712c70Ba2f9f8E"), // Gary
+			common.HexToAddress("0x0DF8fa387C602AE62559cC4aFa4972A7045d6707"), // Guillaume
 		},
 		Threshold: 2,
 	}
 
 	// RopstenChainConfig contains the chain parameters to run a node on the Ropsten test network.
 	RopstenChainConfig = &ChainConfig{
-		ChainID:             big.NewInt(573),
+		ChainID:             big.NewInt(3),
 		HomesteadBlock:      big.NewInt(0),
 		DAOForkBlock:        nil,
 		DAOForkSupport:      true,
 		EIP150Block:         big.NewInt(0),
-		EIP150Hash:          common.HexToHash("0x0000000000000000000000000000000000000000000000000000000000000000"),
+		EIP150Hash:          common.HexToHash("0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d"),
 		EIP155Block:         big.NewInt(10),
 		EIP158Block:         big.NewInt(10),
 		ByzantiumBlock:      big.NewInt(1_700_000),
